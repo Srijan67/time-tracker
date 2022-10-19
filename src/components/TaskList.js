@@ -15,23 +15,26 @@ const TaskList = () => {
           <div
             key={index}
             onClick={() => {
-              console.log(item.title, "  des: ", item.description);
               setModalVis(true);
               setSingleTask(item);
             }}
           >
-            <div className="text-left text-lg">
-              <span className="digits">
-                {("0" + Math.floor((item.time / 60000) % 60)).slice(-2)}:
-              </span>
-              <span className="digits">
-                {("0" + Math.floor((item.time / 1000) % 60)).slice(-2)}:
-              </span>
-              <span className="digits mili-sec">
-                {("0" + ((item.time / 10) % 100)).slice(-2)}
-              </span>{" "}
-              <span>{item.title}</span>
-              <span> {item.description}</span>
+            <div className="text-left text-lg ml-4 mt-2 w-1/2 bg-yellow-600 px-4 rounded-md flex flex-row justify-between">
+              <div>
+                <span className="">
+                  {("0" + Math.floor((item.time / 60000) % 60)).slice(-2)}:
+                </span>
+                <span className="">
+                  {("0" + Math.floor((item.time / 1000) % 60)).slice(-2)}:
+                </span>
+                <span className="">
+                  {("0" + ((item.time / 10) % 100)).slice(-2)}
+                </span>
+              </div>
+              <div className="">
+                <div className="text-right ml-auto">{item.title}</div>
+                <div className="text-sm text-right"> {item.description}</div>
+              </div>
             </div>
           </div>
         );
