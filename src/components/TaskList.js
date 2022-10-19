@@ -14,6 +14,7 @@ const TaskList = () => {
         return (
           <div
             key={index}
+            className="cursor-pointer"
             onClick={() => {
               setModalVis(true);
               setSingleTask(item);

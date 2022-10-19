@@ -8,7 +8,7 @@ function App() {
       <div className="stop-watch bg-slate-400 md:w-1/3">
         <StopWatch />
       </div>
-      <div className="list-area text-center bg-yellow-800 md:w-2/3 ">
+      <div className="list-area text-center bg-yellow-800 md:w-2/3  ">
         <TaskList />
       </div>
     </div>

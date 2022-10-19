@@ -37,16 +37,10 @@ const StopWatch = () => {
   };
   return (
     <div className="h-screen flex flex-col justify-center pb-11">
-      <div className="font-bold text-5xl mt-auto">
-        <span className="digits">
-          {("0" + Math.floor((time / 60000) % 60)).slice(-2)}:
-        </span>
-        <span className="digits">
-          {("0" + Math.floor((time / 1000) % 60)).slice(-2)}:
-        </span>
-        <span className="digits mili-sec">
-          {("0" + ((time / 10) % 100)).slice(-2)}
-        </span>
+      <div className="font-bold text-6xl mt-auto">
+        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+        <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
+        <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </div>
       <div className="btn-section mt-auto flex justify-between items-center px-8">
         <button
